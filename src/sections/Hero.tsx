@@ -80,7 +80,7 @@ export function Hero() {
         >
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-lift sm:aspect-[5/5.5]">
             <Image
-              src="https://images.unsplash.com/photo-1584308972272-9e4e7685e80f?auto=format&fit=crop&w=1200&q=80"
+              src="/farmaceutica.png"
               alt="Farmacêutica preparando fórmula manipulada em laboratório"
               fill
               priority
