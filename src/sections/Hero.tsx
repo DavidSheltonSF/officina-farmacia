@@ -17,15 +17,6 @@ const indicators = [
 export function Hero() {
   return (
     <section id="inicio" className="relative overflow-hidden bg-sand-50 pt-32 pb-20 lg:pb-28">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-brand-100 blur-3xl"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-32 bottom-0 h-96 w-96 rounded-full bg-gold-400/10 blur-3xl"
-      />
-
       <Container className="relative grid items-center gap-14 lg:grid-cols-2 lg:gap-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
