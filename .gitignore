@@ -1,3 +1,6 @@
+# local only files
+/ignored
+
 # dependencies
 /node_modules
 /.pnp
