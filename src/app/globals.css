@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html {
+  scroll-padding-top: 88px;
+}
+
+body {
+  background-color: #fbfaf6;
+  color: #12190f;
+}
+
+::selection {
+  background-color: #8fd3b0;
+  color: #0f2e22;
+}
+
+/* Foco visível consistente em toda a aplicação */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #2f8f5b;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Elemento de assinatura visual: "ficha de receita" com bordas perfuradas,
+   remetendo a uma etiqueta/rótulo farmacêutico de manipulação. */
+.rx-ticket {
+  position: relative;
+  background-color: #fbfaf6;
+}
+
+.rx-ticket::before,
+.rx-ticket::after {
+  content: '';
+  position: absolute;
+  left: -12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background-color: #f7f5ef;
+  z-index: 10;
+}
+
+.rx-ticket::before {
+  top: -12px;
+}
+
+.rx-ticket::after {
+  bottom: -12px;
+}
+
+.rx-divider {
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(15, 46, 34, 0.25) 0,
+    rgba(15, 46, 34, 0.25) 6px,
+    transparent 6px,
+    transparent 14px
+  );
+  height: 1px;
+}
+
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+.text-balance {
+  text-wrap: balance;
+}

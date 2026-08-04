@@ -1,0 +1,20 @@
+type ClassValue = string | number | null | boolean | undefined;
+
+/**
+ * Combina classes condicionalmente, ignorando valores falsy.
+ * Substitui a necessidade de bibliotecas externas como clsx.
+ */
+export function cn(...classes: ClassValue[]): string {
+  return classes.filter(Boolean).join(' ');
+}
+
+/**
+ * Normaliza texto para comparação de busca (sem acentos, minúsculo).
+ */
+export function normalizeSearchText(value: string): string {
+  return value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim();
+}

@@ -1,0 +1,86 @@
+'use client';
+
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { Target, HeartHandshake, Sparkles } from 'lucide-react';
+import { Container } from '@/components/ui/Container';
+import { SectionHeading } from '@/components/ui/SectionHeading';
+
+const pillars = [
+  {
+    title: 'História',
+    description:
+      'Nascemos em 2011 a partir do encontro entre farmacêuticos e médicos que acreditavam em um cuidado mais individual. Hoje somos referência em manipulação magistral no Rio de Janeiro.',
+    icon: Sparkles,
+  },
+  {
+    title: 'Missão',
+    description:
+      'Transformar prescrições em fórmulas precisas, seguras e acessíveis, aproximando a ciência farmacêutica da rotina de cada paciente.',
+    icon: Target,
+  },
+  {
+    title: 'Compromisso',
+    description:
+      'Rastreabilidade em cada etapa da manipulação, ética profissional e um atendimento que trata cada receita com a atenção que ela merece.',
+    icon: HeartHandshake,
+  },
+];
+
+export function About() {
+  return (
+    <section id="sobre" className="bg-white py-24 lg:py-32">
+      <Container className="grid items-center gap-16 lg:grid-cols-2">
+        <motion.div
+          initial={{ opacity: 0, x: -24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="relative order-2 lg:order-1"
+        >
+          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-lift">
+            <Image
+              src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1000&q=80"
+              alt="Equipe farmacêutica da Officina analisando fórmulas manipuladas"
+              fill
+              sizes="(min-width: 1024px) 40vw, 90vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="absolute -bottom-6 -right-4 rounded-2xl bg-brand-800 px-6 py-5 text-sand-50 shadow-card sm:-right-8">
+            <p className="font-display text-3xl">13 anos</p>
+            <p className="text-xs uppercase tracking-widest text-brand-200">cuidando de fórmulas</p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
+          className="order-1 lg:order-2"
+        >
+          <SectionHeading
+            eyebrow="Sobre a Officina"
+            title="Farmácia de manipulação feita por gente que entende de gente."
+            description="Combinamos rigor técnico e cuidado humano para transformar cada receita em uma fórmula pensada exclusivamente para você."
+          />
+
+          <div className="mt-10 space-y-7">
+            {pillars.map((pillar) => (
+              <div key={pillar.title} className="flex gap-4">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+                  <pillar.icon className="h-5 w-5" aria-hidden="true" />
+                </span>
+                <div>
+                  <h3 className="font-display text-lg text-ink-900">{pillar.title}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-ink-500">{pillar.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </Container>
+    </section>
+  );
+}
