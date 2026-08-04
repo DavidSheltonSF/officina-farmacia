@@ -28,14 +28,15 @@ interface CommonProps {
   children: ReactNode;
 }
 
-interface ButtonAsButton extends CommonProps, ButtonHTMLAttributes<HTMLButtonElement> {
+type ButtonAsButton =  {
   as?: 'button';
-}
+} & CommonProps & ButtonHTMLAttributes<HTMLButtonElement>
 
-interface ButtonAsAnchor extends CommonProps, AnchorHTMLAttributes<HTMLAnchorElement> {
-  as: 'a';
-  href: string;
-}
+type ButtonAsAnchor =  {
+    as: 'a';
+  href: string
+} & CommonProps & AnchorHTMLAttributes<HTMLAnchorElement> 
+
 
 export type ButtonProps = ButtonAsButton | ButtonAsAnchor;
 
