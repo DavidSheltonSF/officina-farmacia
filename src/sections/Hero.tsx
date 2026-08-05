@@ -7,6 +7,7 @@ import { whatsappConfig } from '@/lib/config';
 import { buildWhatsAppUrl } from '@/services/whatsapp';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
+import { SectionHeading } from '@/components/ui/SectionHeading';
 
 const indicators = [
   'Atendimento personalizado',
@@ -23,19 +24,12 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-brand-300 bg-brand-100 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">
-            <span className="h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true" />
-            Farmácia de manipulação
-          </span>
-
-          <h1 className="mt-5 text-balance font-display text-4xl leading-[1.08] text-ink-900 sm:text-5xl lg:text-[3.4rem]">
-            Sua fórmula, preparada com a precisão que a sua saúde merece.
-          </h1>
-
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-500">
-            Manipulamos medicamentos e cosméticos sob medida, com farmacêuticos especializados, matérias-primas
-            premium e entrega em até 48 horas em toda a região.
-          </p>
+          <SectionHeading 
+            eyebrow='Farmácia de manipulação' 
+            title="Sua fórmula, preparada com a precisão que a sua saúde merece." 
+            description='Manipulamos medicamentos e cosméticos sob medida, com farmacêuticos especializados, matérias-primas
+            premium e entrega em até 48 horas em toda a região.'
+          />
 
           <div className="mt-9 flex flex-col gap-3.5 sm:flex-row">
             <Button
