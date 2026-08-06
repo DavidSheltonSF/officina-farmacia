@@ -40,7 +40,7 @@ export function About() {
         >
           <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-lift">
             <Image
-              src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1000&q=80"
+              src="/farmaceutico-segurando-frasco.png"
               alt="Equipe farmacêutica da Officina analisando fórmulas manipuladas"
               fill
               sizes="(min-width: 1024px) 40vw, 90vw"
