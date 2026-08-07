@@ -107,9 +107,9 @@ export function Navbar() {
         {isOpen && (
           <motion.div
             id="mobile-menu"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1}}
+            exit={{ opacity: 0}}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
             className="overflow-hidden border-t border-brand-100 bg-sand-50 lg:hidden"
           >
