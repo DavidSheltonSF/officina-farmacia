@@ -11,6 +11,9 @@ import { useLockBodyScroll } from '@/hooks/useLockBodyScroll';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { cn } from '@/lib/utils';
+import { NavbarLink } from './NavbarLink';
+
+Navbar.Link = NavbarLink
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,12 +63,13 @@ export function Navbar() {
           <ul className="hidden items-center gap-1 lg:flex">
             {navLinks.map((link) => (
               <li key={link.sectionId}>
-                <a
+                <Navbar.Link
+                isActive={activeId === link.sectionId}
                   href={link.href}
                   onClick={(event) => handleLinkClick(event, link.sectionId)}
                   aria-current={activeId === link.sectionId ? 'page' : undefined}
                   className={cn(
-                    'relative rounded-full px-4 py-2 text-sm font-medium transition-colors',
+                    'relative rounded-full',
                     activeId === link.sectionId
                       ? 'text-brand-800'
                       : 'text-ink-500 hover:text-brand-700'
@@ -79,7 +83,7 @@ export function Navbar() {
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
-                </a>
+                </Navbar.Link>
               </li>
             ))}
           </ul>
@@ -115,18 +119,15 @@ export function Navbar() {
           >
             <Container className="flex flex-col gap-1 py-4">
               {navLinks.map((link) => (
-                <a
+                <Navbar.Link
+                  isActive={activeId === link.sectionId}
                   key={link.sectionId}
                   href={link.href}
                   onClick={(event) => handleLinkClick(event, link.sectionId)}
                   aria-current={activeId === link.sectionId ? 'page' : undefined}
-                  className={cn(
-                    'rounded-xl px-4 py-3 text-base font-medium transition-colors',
-                    activeId === link.sectionId ? 'bg-brand-100 text-brand-800' : 'text-ink-700 hover:bg-brand-50'
-                  )}
                 >
                   {link.label}
-                </a>
+                </Navbar.Link>
               ))}
               <Button
                 as="a"
