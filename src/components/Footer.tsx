@@ -90,8 +90,8 @@ export function Footer() {
                 Perguntas frequentes
               </Link>
             </li>
-            <li>Responsável técnico: Dra. Camila Andrade — CRF-RJ 28.451</li>
-            <li>CNPJ: 12.345.678/0001-90</li>
+            <li>Responsável técnico: {siteConfig.technicalManager}</li>
+            <li>CNPJ: {siteConfig.cnpj}</li>
           </ul>
         </div>
       </Container>
