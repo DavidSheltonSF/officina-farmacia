@@ -24,6 +24,7 @@ export const siteConfig = {
   email: 'contato@officinamanipulacao.com.br',
   phoneDisplay: '(21) 3200-4455',
   phoneHref: '+552132004455',
+  businessHours: ['Seg. a Sex.: 08h às 19h', 'Sáb.: 08h às 13h'],
 } as const;
 
 export const whatsappConfig = {
@@ -31,8 +32,7 @@ export const whatsappConfig = {
   number: '5521999998888',
   defaultMessage:
     'Olá! Gostaria de enviar minha receita e saber mais sobre a manipulação de fórmulas na Officina.',
-  budgetMessage:
-    'Olá! Gostaria de solicitar um orçamento para manipulação de uma fórmula.',
+  budgetMessage: 'Olá! Gostaria de solicitar um orçamento para manipulação de uma fórmula.',
 } as const;
 
 export const socialConfig = {
