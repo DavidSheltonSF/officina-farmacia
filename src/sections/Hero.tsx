@@ -8,6 +8,7 @@ import { buildWhatsAppUrl } from '@/services/whatsapp';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
 
 const indicators = [
   'Atendimento personalizado',
@@ -32,16 +33,9 @@ export function Hero() {
           />
 
           <div className="mt-9 flex flex-col gap-3.5 sm:flex-row">
-            <Button
-              as="a"
-              href={buildWhatsAppUrl(whatsappConfig.defaultMessage)}
-              target="_blank"
-              rel="noopener noreferrer"
-              size="lg"
-              icon={<ArrowRight className="h-4 w-4" aria-hidden="true" />}
-            >
+            <WhatsAppButton icon={<ArrowRight className="h-4 w-4" aria-hidden="true" />}>
               Enviar Receita
-            </Button>
+            </WhatsAppButton>
             <Button
               as="a"
               href="#unidades"
