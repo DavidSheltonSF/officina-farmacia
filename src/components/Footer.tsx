@@ -1,8 +1,9 @@
 import Link from 'next/link';
-import { FlaskConical, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Instagram, Facebook, Linkedin } from 'lucide-react';
 import { navLinks } from '@/data/navigation';
 import { siteConfig, socialConfig } from '@/lib/config';
 import { Container } from '@/components/ui/Container';
+import { Logo } from './Logo';
 
 const socialLinks = [
   { label: 'Instagram', href: socialConfig.instagram, icon: Instagram },
@@ -18,9 +19,7 @@ export function Footer() {
       <Container className="grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2.5">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-800 text-sand-50">
-              <FlaskConical className="h-5 w-5" aria-hidden="true" />
-            </span>
+            <Logo/>
             <span className="font-display text-lg font-semibold text-sand-50">
               {siteConfig.shortName}
             </span>
