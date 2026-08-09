@@ -67,11 +67,15 @@ export function Footer() {
             Contato
           </h3>
           <ul className="mt-4 space-y-2.5 text-sm text-sand-300">
-            <li>{siteConfig.phoneDisplay}</li>
-            <li>{siteConfig.email}</li>
-            {siteConfig.businessHours.map((hours) => {
-              return <li key={hours}>{hours}</li>;
-            })}
+            <li>
+              <a href={`tel:${siteConfig.phoneHref}`}>{siteConfig.phoneDisplay}</a>
+            </li>
+            <li>
+              <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+            </li>
+            {siteConfig.businessHours.map((hours) => (
+              <li key={hours}>{hours}</li>
+            ))}
           </ul>
         </div>
 
