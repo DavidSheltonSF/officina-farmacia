@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { cn } from '@/lib/utils';
 import { NavbarLink } from './NavbarLink';
+import { WhatsAppButton } from './WhatsAppButton';
 
 Navbar.Link = NavbarLink
 
@@ -89,9 +90,9 @@ export function Navbar() {
           </ul>
 
           <div className="hidden lg:block">
-            <Button as="a" href={buildWhatsAppUrl(whatsappConfig.defaultMessage)} target="_blank" rel="noopener noreferrer" size="md">
+            <WhatsAppButton>
               Enviar Receita
-            </Button>
+            </WhatsAppButton>
           </div>
 
           <button
@@ -129,16 +130,11 @@ export function Navbar() {
                   {link.label}
                 </Navbar.Link>
               ))}
-              <Button
-                as="a"
-                href={buildWhatsAppUrl(whatsappConfig.defaultMessage)}
-                target="_blank"
-                rel="noopener noreferrer"
-                size="md"
+              <WhatsAppButton
                 className="mt-3 w-full"
               >
                 Enviar Receita
-              </Button>
+              </WhatsAppButton>
             </Container>
           </motion.div>
         )}
