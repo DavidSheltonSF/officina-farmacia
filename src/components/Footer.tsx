@@ -16,16 +16,18 @@ export function Footer() {
   return (
     <footer className="bg-brand-950 text-sand-200">
       <Container className="grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="lg:col-span-1">
+        <div>
           <div className="flex items-center gap-2.5">
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-800 text-sand-50">
               <FlaskConical className="h-5 w-5" aria-hidden="true" />
             </span>
-            <span className="font-display text-lg font-semibold text-sand-50">{siteConfig.shortName}</span>
+            <span className="font-display text-lg font-semibold text-sand-50">
+              {siteConfig.shortName}
+            </span>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-sand-300">
-            Farmácia de manipulação com fórmulas individualizadas, laboratórios certificados e atendimento humano do
-            início ao fim.
+            Farmácia de manipulação com fórmulas individualizadas, laboratórios certificados e
+            atendimento humano do início ao fim.
           </p>
           <div className="mt-6 flex gap-3">
             {socialLinks.map((social) => (
@@ -44,11 +46,16 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-sand-50">Navegação</h3>
+          <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-sand-50">
+            Navegação
+          </h3>
           <ul className="mt-4 space-y-2.5">
             {navLinks.map((link) => (
               <li key={link.sectionId}>
-                <a href={link.href} className="text-sm text-sand-300 transition-colors hover:text-brand-300">
+                <a
+                  href={link.href}
+                  className="text-sm text-sand-300 transition-colors hover:text-brand-300"
+                >
                   {link.label}
                 </a>
               </li>
@@ -57,7 +64,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-sand-50">Contato</h3>
+          <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-sand-50">
+            Contato
+          </h3>
           <ul className="mt-4 space-y-2.5 text-sm text-sand-300">
             <li>{siteConfig.phoneDisplay}</li>
             <li>{siteConfig.email}</li>
@@ -67,7 +76,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-sand-50">Institucional</h3>
+          <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-sand-50">
+            Institucional
+          </h3>
           <ul className="mt-4 space-y-2.5 text-sm text-sand-300">
             <li>
               <Link href="#sobre" className="transition-colors hover:text-brand-300">
