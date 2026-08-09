@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, FlaskConical } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { navLinks } from '@/data/navigation';
 import { siteConfig } from '@/lib/config';
 import { useActiveSection } from '@/hooks/useActiveSection';
@@ -11,6 +11,7 @@ import { Container } from '@/components/ui/Container';
 import { cn } from '@/lib/utils';
 import { NavbarLink } from './NavbarLink';
 import { WhatsAppButton } from './WhatsAppButton';
+import { Logo } from './Logo';
 
 Navbar.Link = NavbarLink;
 
@@ -53,9 +54,7 @@ export function Navbar() {
             className="flex items-center gap-2.5"
             aria-label={`${siteConfig.name} - Início`}
           >
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-800 text-sand-50">
-              <FlaskConical className="h-5 w-5" aria-hidden="true" />
-            </span>
+            <Logo/>
             <span className="font-display text-lg font-semibold text-ink-900">
               {siteConfig.shortName}
             </span>
