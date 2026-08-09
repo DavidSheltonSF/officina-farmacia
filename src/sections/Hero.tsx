@@ -24,11 +24,11 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <SectionHeading 
-            eyebrow='Farmácia de manipulação' 
-            title="Sua fórmula, preparada com a precisão que a sua saúde merece." 
-            description='Manipulamos medicamentos e cosméticos sob medida, com farmacêuticos especializados, matérias-primas
-            premium e entrega em até 48 horas em toda a região.'
+          <SectionHeading
+            eyebrow="Farmácia de manipulação"
+            title="Sua fórmula, preparada com a precisão que a sua saúde merece."
+            description="Manipulamos medicamentos e cosméticos sob medida, com farmacêuticos especializados, matérias-primas
+            premium e entrega em até 48 horas em toda a região."
           />
 
           <div className="mt-9 flex flex-col gap-3.5 sm:flex-row">
@@ -42,7 +42,13 @@ export function Hero() {
             >
               Enviar Receita
             </Button>
-            <Button as="a" href="#unidades" variant="outline" size="lg" icon={<MapPin className="h-4 w-4" aria-hidden="true" />}>
+            <Button
+              as="a"
+              href="#unidades"
+              variant="outline"
+              size="lg"
+              icon={<MapPin className="h-4 w-4" aria-hidden="true" />}
+            >
               Encontrar Unidade
             </Button>
           </div>
@@ -75,10 +81,13 @@ export function Hero() {
           </div>
 
           <div className="rx-ticket absolute -bottom-8 left-4 w-[calc(100%-2rem)] rounded-2xl px-6 py-5 shadow-card sm:left-8 sm:w-72">
-            <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">Entrega expressa</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">
+              Entrega expressa
+            </p>
             <div className="rx-divider mt-2" />
             <p className="mt-3 text-sm text-ink-500">
-              <span className="font-display text-2xl text-ink-900">48h</span> para sua fórmula chegar até você
+              <span className="font-display text-2xl text-ink-900">48h</span> para sua fórmula
+              chegar até você
             </p>
           </div>
         </motion.div>
