@@ -19,7 +19,7 @@ export function Footer() {
       <Container className="grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2.5">
-            <Logo/>
+            <Logo />
             <span className="font-display text-lg font-semibold text-sand-50">
               {siteConfig.shortName}
             </span>
@@ -69,8 +69,9 @@ export function Footer() {
           <ul className="mt-4 space-y-2.5 text-sm text-sand-300">
             <li>{siteConfig.phoneDisplay}</li>
             <li>{siteConfig.email}</li>
-            <li>Seg. a Sex.: 08h às 19h</li>
-            <li>Sáb.: 08h às 13h</li>
+            {siteConfig.businessHours.map((hours) => {
+              return <li key={hours}>{hours}</li>;
+            })}
           </ul>
         </div>
 
