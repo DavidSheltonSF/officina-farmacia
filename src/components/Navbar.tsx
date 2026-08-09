@@ -14,7 +14,7 @@ import { cn } from '@/lib/utils';
 import { NavbarLink } from './NavbarLink';
 import { WhatsAppButton } from './WhatsAppButton';
 
-Navbar.Link = NavbarLink
+Navbar.Link = NavbarLink;
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,14 +58,16 @@ export function Navbar() {
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-800 text-sand-50">
               <FlaskConical className="h-5 w-5" aria-hidden="true" />
             </span>
-            <span className="font-display text-lg font-semibold text-ink-900">{siteConfig.shortName}</span>
+            <span className="font-display text-lg font-semibold text-ink-900">
+              {siteConfig.shortName}
+            </span>
           </a>
 
           <ul className="hidden items-center gap-1 lg:flex">
             {navLinks.map((link) => (
               <li key={link.sectionId}>
                 <Navbar.Link
-                isActive={activeId === link.sectionId}
+                  isActive={activeId === link.sectionId}
                   href={link.href}
                   onClick={(event) => handleLinkClick(event, link.sectionId)}
                   aria-current={activeId === link.sectionId ? 'page' : undefined}
@@ -90,9 +92,7 @@ export function Navbar() {
           </ul>
 
           <div className="hidden lg:block">
-            <WhatsAppButton>
-              Enviar Receita
-            </WhatsAppButton>
+            <WhatsAppButton>Enviar Receita</WhatsAppButton>
           </div>
 
           <button
@@ -103,7 +103,11 @@ export function Navbar() {
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
           >
-            {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
+            {isOpen ? (
+              <X className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            )}
           </button>
         </nav>
       </Container>
@@ -113,8 +117,8 @@ export function Navbar() {
           <motion.div
             id="mobile-menu"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1}}
-            exit={{ opacity: 0}}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
             className="overflow-hidden border-t border-brand-100 bg-sand-50 lg:hidden"
           >
@@ -130,11 +134,7 @@ export function Navbar() {
                   {link.label}
                 </Navbar.Link>
               ))}
-              <WhatsAppButton
-                className="mt-3 w-full"
-              >
-                Enviar Receita
-              </WhatsAppButton>
+              <WhatsAppButton className="mt-3 w-full">Enviar Receita</WhatsAppButton>
             </Container>
           </motion.div>
         )}
