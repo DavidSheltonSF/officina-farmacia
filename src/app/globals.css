@@ -44,33 +44,6 @@ summary:focus-visible {
   border-radius: 4px;
 }
 
-/* Elemento de assinatura visual: "ficha de receita" com bordas perfuradas,
-   remetendo a uma etiqueta/rótulo farmacêutico de manipulação. */
-.rx-ticket {
-  position: relative;
-  background-color: #fbfaf6;
-}
-
-.rx-ticket::before,
-.rx-ticket::after {
-  content: '';
-  position: absolute;
-  left: -12px;
-  width: 24px;
-  height: 24px;
-  border-radius: 9999px;
-  background-color: #f7f5ef;
-  z-index: 10;
-}
-
-.rx-ticket::before {
-  top: -12px;
-}
-
-.rx-ticket::after {
-  bottom: -12px;
-}
-
 .rx-divider {
   background-image: repeating-linear-gradient(
     to right,
