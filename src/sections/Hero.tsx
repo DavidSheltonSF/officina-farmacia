@@ -3,8 +3,6 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight, MapPin, CheckCircle2 } from 'lucide-react';
-import { whatsappConfig } from '@/lib/config';
-import { buildWhatsAppUrl } from '@/services/whatsapp';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
