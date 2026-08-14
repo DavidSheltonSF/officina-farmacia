@@ -5,7 +5,7 @@ import { PropsWithChildren, ReactNode } from 'react';
 
 interface Props {
   className?: string;
-  icon: ReactNode;
+  icon?: ReactNode;
 }
 
 export function WhatsAppButton({ children, className, icon }: PropsWithChildren<Props>) {
