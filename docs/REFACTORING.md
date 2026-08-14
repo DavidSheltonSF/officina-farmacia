@@ -1,14 +1,14 @@
 # Refatorções e Correções
 
-Aqui, está documentado as correções e melhorias vindas da minha análise junto ao ChatGPT, em que analisei o código gerado pelo Claude para a construção dessa landing page.
+Aqui, está documentado as correções e melhorias vindas da minha análise junto ao ChatGPT, onde que analisei o código gerado pelo Claude para a construção dessa landing page.
 
 ## Button.tsx
 
-Foi encontrado um erro de TypeScript pois as interfaces ButtonAsAnchor and ButtonAsButton usadas para criar ButtonProps herdavam de duas outras interfaces. Esse erro foi corrigido quando ao envés de usar interfaces, usei type aliasses. Todo o resto funcionava perfeitamente, portanto não precisou de alterações.
+Encontrei um erro de TypeScript vindo de duas interfaces `ButtonAsAnchor` e `ButtonAsButton` usadas para criar `ButtonProps`, e que herdavam de duas outras interfaces. Esse erro foi corrigido quando substituí interfaces por type aliases. Todo o resto funcionava perfeitamente, portanto não precisou de alterações.
 
 ## Navbar
 
-A barra de navegações era basicamente uma lista de liks que qundo clicados faziam com que a página rolasse para a sessão correspondente.
+A barra de navegação era basicamente uma lista de links que quando clicados faziam com que a página rolasse para a seção correspondente.
 
 ### Bug no menu mobile
 
@@ -16,7 +16,7 @@ Na versão para dispositivos móveis, os links no menu simplesmente não funcion
 
 A solução mais simples foi simplesmente remover a animação de `height` e manter a animação de `opacity`.
 
-Optei ela simplicidade, embora o ChatGPT também tivesse sugerido usar um estado para controlar a animação de `height` e fazer com que a rolagem ocorrece apenas depois, utilizando também do recurso do FramerMotion `onExitComplete`.
+Optei ela simplicidade, embora o ChatGPT também tivesse sugerido usar um estado para controlar a animação de `height` e fazer com que a rolagem ocorrece apenas depois, utilizando também do recurso do Framer Motion `onExitComplete`.
 
 ```tsx
 const [pendingSection, setPendingSection] = useState<string | null>(null);
@@ -34,7 +34,7 @@ const [pendingSection, setPendingSection] = useState<string | null>(null);
 >
 ```
 
-### Navbar Desktop e Menu Mobile, Dois elementos em úm componente
+### Navbar Desktop e Menu Mobile, Dois elementos em um componente
 
 A IA criou dois elementos, um para ser a barra de navegação desktop e outro para ser o menu mobile. O ideal seria utilizar um único componente que se adaptasse ao tamanho da tela.
 
@@ -44,7 +44,7 @@ Apesar de ter tentado, não consegui unir esses elementos em um único component
 
 ### Estilização simplificada com Tailwind CSS
 
-Havia um elemento que basicamente era uma etiqueta semelhante às usadas em farmácias. O elemento possuia uma classe css `rx-ticket` que simplesmente adicionava a posição `relative` e a cor #fbfaf6.
+Havia um elemento que basicamente era uma ficha de receita semelhante às usadas em farmácias. O elemento possuia uma classe CSS `rx-ticket` que simplesmente adicionava a posição `relative` e a cor #fbfaf6.
 
 ```typescript
   <div className="rx-ticket absolute -bottom-8 left-4 w-[calc(100%-2rem)] rounded-2xl px-6 py-5 shadow-card sm:left-8 sm:w-72">
@@ -68,7 +68,7 @@ Havia um elemento que basicamente era uma etiqueta semelhante às usadas em farm
 }
 ```
 
-Um resultado semelhante pôde ser alcançado tratando o elemento como um elemento estático e não abtoluto ou relativo.
+Um resultado semelhante pôde ser alcançado tratando o elemento como um elemento no fluxo normal do documento e não absoluto ou relativo. Já que não era necessário posicionamento e sim espaçamento.
 
 ```typescript
  <div className="ml-4 mt-8 rounded-2xl px-6 py-5 shadow-card sm:ml-8 sm:w-72">
@@ -85,7 +85,7 @@ Um resultado semelhante pôde ser alcançado tratando o elemento como um element
 
 ### Estilos inúteis
 
-O código gerado também continha alguns estilos adicionais sobre `rx-ticked` que geravam nada mais que dois circulos invisíveis e inúteis em cima e em baixo da etiqueta, no cando esquerdo.
+O código gerado também continha alguns estilos adicionais sobre `rx-ticket` que geravam nada mais que dois círculos invisíveis e inúteis a cima e abaixo da etiqueta, no cando esquerdo.
 
 ```css
 .rx-ticket::before,
@@ -111,4 +111,4 @@ O código gerado também continha alguns estilos adicionais sobre `rx-ticked` qu
 
 ![Card arredondado com o texto ‘Entrega expressa’ e destaque para ‘48h’, acompanhado por dois círculos amarelos nas laterais.](image.png)
 
-Como não acrescentavam nada no design decidi remover essa classe e esses estilos por completo. Apesar de ter mantido `rx-divider` pois este acrescentava valor ao design.
+Como não acrescentavam nada no design, decidi remover essa classe e esses estilos por completo. Apesar de ter mantido `rx-divider` pois este acrescentava valor ao design.
