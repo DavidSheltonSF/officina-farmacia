@@ -74,7 +74,7 @@ export function Hero() {
             />
           </div>
 
-          <div className="rx-ticket absolute -bottom-8 left-4 w-[calc(100%-2rem)] rounded-2xl px-6 py-5 shadow-card sm:left-8 sm:w-72">
+          <div className="ml-4 mt-8 rounded-2xl px-6 py-5 shadow-card sm:ml-8 sm:w-72">
             <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">
               Entrega expressa
             </p>
