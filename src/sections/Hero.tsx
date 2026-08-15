@@ -63,7 +63,7 @@ export function Hero() {
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-lift sm:aspect-[5/5.5]">
             <Image
               src="/farmaceutica.png"
-              alt="Farmacêutica preparando fórmula manipulada em laboratório"
+              alt="Farmacêutica sorridente olhando para a câmera"
               fill
               priority
               sizes="(min-width: 1024px) 40vw, 90vw"
