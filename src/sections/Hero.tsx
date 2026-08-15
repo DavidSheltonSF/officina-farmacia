@@ -23,7 +23,7 @@ export function Hero() {
           <SectionHeading eyebrow={eyebrow} title={title} description={description} />
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <WhatsAppButton icon={<ArrowRight className="h-4 w-4" aria-hidden="true" />}>
+            <WhatsAppButton icon={<ArrowRight className="size-4" aria-hidden="true" />}>
               Enviar Receita
             </WhatsAppButton>
             <Button
