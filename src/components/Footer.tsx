@@ -4,6 +4,7 @@ import { navLinks } from '@/data/navigation';
 import { siteConfig, socialConfig } from '@/lib/config';
 import { Container } from '@/components/ui/Container';
 import { Logo } from './Logo';
+import { business } from '@/data/business';
 
 const socialLinks = [
   { label: 'Instagram', href: socialConfig.instagram, icon: Instagram },
@@ -68,12 +69,12 @@ export function Footer() {
           </h3>
           <ul className="mt-4 space-y-2.5 text-sm text-sand-300">
             <li>
-              <a href={`tel:${siteConfig.phoneHref}`}>{siteConfig.phoneDisplay}</a>
+              <a href={`tel:${business.phoneHref}`}>{business.phoneDisplay}</a>
             </li>
             <li>
-              <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+              <a href={`mailto:${business.email}`}>{business.email}</a>
             </li>
-            {siteConfig.businessHours.map((hours) => (
+            {business.businessHours.map((hours) => (
               <li key={hours}>{hours}</li>
             ))}
           </ul>
@@ -94,8 +95,8 @@ export function Footer() {
                 Perguntas frequentes
               </Link>
             </li>
-            <li>Responsável técnico: {siteConfig.technicalManager}</li>
-            <li>CNPJ: {siteConfig.cnpj}</li>
+            <li>Responsável técnico: {business.technicalManager}</li>
+            <li>CNPJ: {business.cnpj}</li>
           </ul>
         </div>
       </Container>
