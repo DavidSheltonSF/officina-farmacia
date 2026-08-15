@@ -5,8 +5,10 @@ import { motion } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { about } from '@/data/about';
+import { business } from '@/data/business';
 
 const { eyebrow, title, description, pillars, image } = about;
+const yearsOfOperation = new Date().getFullYear() - business.foundedYear;
 
 export function About() {
   return (
@@ -29,7 +31,7 @@ export function About() {
             />
           </div>
           <div className="absolute -bottom-6 -right-4 rounded-2xl bg-brand-800 px-6 py-5 text-sand-50 shadow-card sm:-right-8">
-            <p className="font-display text-3xl">13 anos</p>
+            <p className="font-display text-3xl">{yearsOfOperation} anos</p>
             <p className="text-xs uppercase tracking-widest text-brand-200">cuidando de fórmulas</p>
           </div>
         </motion.div>
