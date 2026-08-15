@@ -30,7 +30,7 @@ export function Hero() {
             premium e entrega em até 48 horas em toda a região."
           />
 
-          <div className="mt-9 flex flex-col gap-3.5 sm:flex-row">
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <WhatsAppButton icon={<ArrowRight className="h-4 w-4" aria-hidden="true" />}>
               Enviar Receita
             </WhatsAppButton>
@@ -39,7 +39,7 @@ export function Hero() {
               href="#unidades"
               variant="outline"
               size="lg"
-              icon={<MapPin className="h-4 w-4" aria-hidden="true" />}
+              icon={<MapPin className="size-4" aria-hidden="true" />}
             >
               Encontrar Unidade
             </Button>
@@ -48,7 +48,7 @@ export function Hero() {
           <ul className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-x-8 sm:gap-y-3">
             {indicators.map((item) => (
               <li key={item} className="flex items-center gap-2 text-sm font-medium text-ink-700">
-                <CheckCircle2 className="h-4.5 w-4.5 shrink-0 text-brand-500" aria-hidden="true" />
+                <CheckCircle2 className="size-4 shrink-0 text-brand-500" aria-hidden="true" />
                 {item}
               </li>
             ))}
