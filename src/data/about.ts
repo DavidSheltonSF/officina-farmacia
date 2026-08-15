@@ -27,6 +27,6 @@ export const about = {
 
   image: {
     src: '/farmaceutico-segurando-frasco.png',
-    alt: 'Equipe farmacêutica da Officina analisando fórmulas manipuladas',
+    alt: 'Farmacêutico sorrindo para a câmera enquanto segura um frasco',
   },
 };
