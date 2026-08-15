@@ -112,3 +112,48 @@ O código gerado também continha alguns estilos adicionais sobre `rx-ticket` qu
 ![Card arredondado com o texto ‘Entrega expressa’ e destaque para ‘48h’, acompanhado por dois círculos amarelos nas laterais.](image.png)
 
 Como não acrescentavam nada no design, decidi remover essa classe e esses estilos por completo. Apesar de ter mantido `rx-divider` pois este acrescentava valor ao design.
+
+### Remoção de `relative` desnecessário da `<section>`
+
+Alguns elementos possuiam:
+
+```tsx
+className = 'relative overflow-hidden ...';
+```
+
+Essas classes foram removidas pois não faziam nada.
+
+### Padronização dos tamanhos dos ícones
+
+Foi identificado o uso de:
+
+```tsx
+h-4.5 w-4.5
+```
+
+E fo substituído por:
+
+```tsx
+size - 4;
+```
+
+Isso torna a definição das dimensões mais consistente.
+
+### Separação do conteúdo da apresentação
+
+O conteúdo textual da Hero estava definido diretamente no componente `Hero`, incluindo título, descrição, indicadores, informações da imagem e informações do card de entrega.
+
+Foi criado o arquivo `src/data/hero.ts` para centralizar essas informações.
+
+O componente passou a consumir os dados através de:
+
+```tsx
+import { heroContent } from '@data/hero';
+```
+
+Isso separa:
+
+- dados/conteúdo => `src/data/hero.ts`
+- estrutura e comportamento => `Hero.ts`
+
+Além de facilitar futuras alterações de conteúdo e uma possível migração para CMS.
