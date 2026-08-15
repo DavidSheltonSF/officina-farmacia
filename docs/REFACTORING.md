@@ -157,3 +157,38 @@ Isso separa:
 - estrutura e comportamento => `Hero.ts`
 
 Além de facilitar futuras alterações de conteúdo e uma possível migração para CMS.
+
+## About
+
+### Centralização do conteúdo da seção
+
+O conteúdo de `About` foi movido para `src/data/about.ts` para que o componente ficasse responsável apenas pela exibição do conteúdo.
+Foram movidos:
+
+- eyebrow
+- title
+- description
+- pillars
+- Informações da imagem (src e alt)
+
+### Calculo dinâmico dos anos de atuação do negócio
+
+Antes a informação dos anos de atuação estava escrita diretamente no componente, o que gerou uma inconsistência temporal com a descrição de um dos pilares. Agora, essa informação é obtida por meio de um calculo dinâmico utilizando o ano atual e o ano de fundação do negócio, extraído da constante `business`.
+
+```tsx
+const yearsOfOperation = new Date().getFullYear() - business.foundedYear;
+```
+
+### Simplificação das classes de tamanho dos icones
+
+Antes
+
+```tsx
+h-11 w-11
+```
+
+Agora
+
+```tsx
+size - 11;
+```
