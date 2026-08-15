@@ -75,7 +75,7 @@ export function Hero() {
             <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">
               Entrega expressa
             </p>
-            <div className="rx-divider mt-2" />
+            <div className="rx-divider mt-2" aria-hidden="true" />
             <p className="mt-3 text-sm text-ink-500">
               <span className="font-display text-2xl text-ink-900">48h</span> para sua fórmula
               chegar até você
