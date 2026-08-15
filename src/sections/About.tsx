@@ -2,30 +2,11 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Target, HeartHandshake, Sparkles } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { about } from '@/data/about';
 
-const pillars = [
-  {
-    title: 'História',
-    description:
-      'Nascemos em 2011 a partir do encontro entre farmacêuticos e médicos que acreditavam em um cuidado mais individual. Hoje somos referência em manipulação magistral no Rio de Janeiro.',
-    icon: Sparkles,
-  },
-  {
-    title: 'Missão',
-    description:
-      'Transformar prescrições em fórmulas precisas, seguras e acessíveis, aproximando a ciência farmacêutica da rotina de cada paciente.',
-    icon: Target,
-  },
-  {
-    title: 'Compromisso',
-    description:
-      'Rastreabilidade em cada etapa da manipulação, ética profissional e um atendimento que trata cada receita com a atenção que ela merece.',
-    icon: HeartHandshake,
-  },
-];
+const { eyebrow, title, description, pillars, image } = about;
 
 export function About() {
   return (
@@ -40,8 +21,8 @@ export function About() {
         >
           <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-lift">
             <Image
-              src="/farmaceutico-segurando-frasco.png"
-              alt="Equipe farmacêutica da Officina analisando fórmulas manipuladas"
+              src={image.src}
+              alt={image.alt}
               fill
               sizes="(min-width: 1024px) 40vw, 90vw"
               className="object-cover"
@@ -60,11 +41,7 @@ export function About() {
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
           className="order-1 lg:order-2"
         >
-          <SectionHeading
-            eyebrow="Sobre a Officina"
-            title="Farmácia de manipulação feita por gente que entende de gente."
-            description="Combinamos rigor técnico e cuidado humano para transformar cada receita em uma fórmula pensada exclusivamente para você."
-          />
+          <SectionHeading eyebrow={eyebrow} title={title} description={description} />
 
           <div className="mt-10 space-y-7">
             {pillars.map((pillar) => (
