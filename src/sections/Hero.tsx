@@ -16,8 +16,8 @@ const indicators = [
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative overflow-hidden bg-sand-50 pt-32 pb-20 lg:pb-28">
-      <Container className="relative grid items-center gap-14 lg:grid-cols-2 lg:gap-10">
+    <section id="inicio" className="overflow-hidden bg-sand-50 pt-32 pb-20 lg:pb-28">
+      <Container className="grid items-center gap-14 lg:grid-cols-2 lg:gap-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,7 +59,6 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.15 }}
-          className="relative"
         >
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-lift sm:aspect-[5/5.5]">
             <Image
