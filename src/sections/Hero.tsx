@@ -7,14 +7,11 @@ import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
-
-const indicators = [
-  'Atendimento personalizado',
-  'Laboratórios certificados',
-  'Qualidade garantida',
-];
+import { heroContent } from '@/data/hero';
 
 export function Hero() {
+  const { indicators, eyebrow, title, description, image, delivery } = heroContent;
+
   return (
     <section id="inicio" className="overflow-hidden bg-sand-50 pt-32 pb-20 lg:pb-28">
       <Container className="grid items-center gap-14 lg:grid-cols-2 lg:gap-10">
@@ -23,12 +20,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <SectionHeading
-            eyebrow="Farmácia de manipulação"
-            title="Sua fórmula, preparada com a precisão que a sua saúde merece."
-            description="Manipulamos medicamentos e cosméticos sob medida, com farmacêuticos especializados, matérias-primas
-            premium e entrega em até 48 horas em toda a região."
-          />
+          <SectionHeading eyebrow={eyebrow} title={title} description={description} />
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <WhatsAppButton icon={<ArrowRight className="h-4 w-4" aria-hidden="true" />}>
@@ -62,8 +54,8 @@ export function Hero() {
         >
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-lift sm:aspect-[5/5.5]">
             <Image
-              src="/farmaceutica.png"
-              alt="Farmacêutica sorridente olhando para a câmera"
+              src={image.src}
+              alt={image.alt}
               fill
               priority
               sizes="(min-width: 1024px) 40vw, 90vw"
@@ -73,12 +65,12 @@ export function Hero() {
 
           <div className="ml-4 mt-8 rounded-2xl px-6 py-5 shadow-card sm:ml-8 sm:w-72">
             <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">
-              Entrega expressa
+              {delivery.title}
             </p>
             <div className="rx-divider mt-2" aria-hidden="true" />
             <p className="mt-3 text-sm text-ink-500">
-              <span className="font-display text-2xl text-ink-900">48h</span> para sua fórmula
-              chegar até você
+              <span className="font-display text-2xl text-ink-900">{delivery.highlight}</span>{' '}
+              {delivery.description}
             </p>
           </div>
         </motion.div>
