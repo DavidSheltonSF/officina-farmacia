@@ -48,8 +48,8 @@ export function About() {
           <div className="mt-10 space-y-7">
             {pillars.map((pillar) => (
               <div key={pillar.title} className="flex gap-4">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700">
-                  <pillar.icon className="h-5 w-5" aria-hidden="true" />
+                <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+                  <pillar.icon className="size-5" aria-hidden="true" />
                 </span>
                 <div>
                   <h3 className="font-display text-lg text-ink-900">{pillar.title}</h3>
