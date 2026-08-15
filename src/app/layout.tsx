@@ -6,6 +6,7 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { WhatsAppFloatButton } from '@/components/WhatsAppFloatButton';
 import './globals.css';
+import { MotionProvider } from '@/components/MotionProvider';
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -96,7 +97,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Pular para o conteúdo
         </a>
         <Navbar />
-        <main id="main-content">{children}</main>
+        <main id="main-content">
+          <MotionProvider>{children}</MotionProvider>
+        </main>
         <Footer />
         <WhatsAppFloatButton />
       </body>
