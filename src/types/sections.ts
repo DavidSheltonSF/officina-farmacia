@@ -1,4 +1,5 @@
 import { Differential } from '.';
+import { Pillar } from './pillars';
 
 export interface Section {
   eyebrow: string;
@@ -20,6 +21,10 @@ export interface HeroSection extends SectionWithImage {
     highlight: string;
     description: string;
   };
+}
+
+export interface AboutSection extends SectionWithImage {
+  pillars: Pillar[];
 }
 
 export interface DifferentialsSection extends Section {
