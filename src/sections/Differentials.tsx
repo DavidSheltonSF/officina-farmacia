@@ -1,19 +1,21 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { differentials } from '@/data/differentials';
+import { differentialsSection } from '@/data/differentials';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 
 export function Differentials() {
+  const { eyebrow, title, description, differentials } = differentialsSection;
+
   return (
     <section id="diferenciais" className="bg-sand-100 py-24 lg:py-32">
       <Container>
         <SectionHeading
-          eyebrow="Diferenciais"
+          eyebrow={eyebrow}
           align="center"
-          title="Cuidado técnico em cada detalhe da manipulação"
-          description="Da matéria-prima à entrega, cada etapa segue protocolos rígidos para garantir segurança e eficácia."
+          title={title}
+          description={description}
           className="mx-auto"
         />
 
