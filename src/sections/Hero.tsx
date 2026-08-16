@@ -7,10 +7,10 @@ import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
-import { heroContent } from '@/data/hero';
+import { heroSection } from '@/data/hero';
 
 export function Hero() {
-  const { indicators, eyebrow, title, description, image, delivery } = heroContent;
+  const { indicators, eyebrow, title, description, image, delivery } = heroSection;
 
   return (
     <section id="inicio" className="overflow-hidden bg-sand-50 pt-32 pb-20 lg:pb-28">
