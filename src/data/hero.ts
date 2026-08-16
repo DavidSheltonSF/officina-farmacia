@@ -1,4 +1,6 @@
-export const heroContent = {
+import { HeroSection } from '@/types/sections';
+
+export const heroContent: HeroSection = {
   eyebrow: 'Farmácia de manipulação',
   title: 'Sua fórmula, preparada com a precisão que a sua saúde merece.',
   description:
