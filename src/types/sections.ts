@@ -13,6 +13,15 @@ export interface SectionWithImage extends Section {
   };
 }
 
+export interface HeroSection extends SectionWithImage {
+  indicators: string[];
+  delivery: {
+    title: string;
+    highlight: string;
+    description: string;
+  };
+}
+
 export interface DifferentialsSection extends Section {
   differentials: Differential[];
 }
