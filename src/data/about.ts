@@ -1,6 +1,7 @@
+import { AboutSection } from '@/types/sections';
 import { HeartHandshake, Sparkles, Target } from 'lucide-react';
 
-export const about = {
+export const about: AboutSection = {
   eyebrow: 'Sobre a Officina',
   title: 'Farmácia de manipulação feita por gente que entende de gente.',
   description:
