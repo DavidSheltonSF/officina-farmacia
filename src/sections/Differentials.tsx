@@ -11,12 +11,7 @@ export function Differentials() {
   return (
     <section id="diferenciais" className="bg-sand-100 py-24 lg:py-32">
       <Container>
-        <SectionHeading
-          eyebrow={eyebrow}
-          align="center"
-          title={title}
-          description={description}
-        />
+        <SectionHeading eyebrow={eyebrow} align="center" title={title} description={description} />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {differentials.map((item, index) => (
@@ -26,7 +21,7 @@ export function Differentials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.45, ease: 'easeOut', delay: index * 0.06 }}
-              className="group rounded-2xl border border-brand-200/70 bg-white p-7 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card"
+              className="group rounded-2xl border border-brand-200/70 bg-white p-7 shadow-soft hover:shadow-card"
             >
               <span className="flex size-12 items-center justify-center rounded-xl bg-brand-800 text-sand-50 transition-colors duration-300 group-hover:bg-brand-600">
                 <item.icon className="size-5" aria-hidden="true" />
