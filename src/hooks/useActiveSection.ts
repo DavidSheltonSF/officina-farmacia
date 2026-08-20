@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
  * Observa as seções da página via IntersectionObserver e retorna
  * o id da seção atualmente visível, para destacar o link ativo na Navbar.
  */
-export function useActiveSection(sectionIds: string[], options?: IntersectionObserverInit): string {
+export function useActiveSection(sectionIds: string[]): string {
   const [activeId, setActiveId] = useState<string>(sectionIds[0] ?? '');
 
   useEffect(() => {
@@ -30,14 +30,13 @@ export function useActiveSection(sectionIds: string[], options?: IntersectionObs
       {
         rootMargin: '-15% 0px -55% 0px',
         threshold: [0, 0.25, 0.5, 0.75, 1],
-        ...options,
       }
     );
 
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, [sectionIds, options]);
+  }, [sectionIds]);
 
   return activeId;
 }
