@@ -192,3 +192,13 @@ Agora
 ```tsx
 size - 11;
 ```
+
+### Differentials.tsx
+
+- O conteúdo da seção foi extraído para `src/data/differentials.ts`, removendo textos e dados diretamente do componente.
+- A estrutura de dados foi reformulada para representar a seção completa através de `differentialsSection`, contendo `eyebrow`, `title`, `description` e a lista de diferenciais.
+- Os dados dos diferenciais continuam sendo tipados através de `Differential`, enquanto a estrutura completa da seção passou a utilizar `DifferentialsSection`.
+- A animação de entrada com Framer Motion foi mantida, utilizando `opacity` e deslocamento vertical (`y`).
+- A animação `hover:-translate-y-1` foi removida para evitar conflito entre a propriedade `transform` controlada pelo Tailwind e a animação `y` controlada pelo Framer Motion.
+- A estilização dos ícones foi simplificada, mantendo a separação entre o tamanho do container e o tamanho do próprio ícone.
+- O link para a seção `Diferenciais` foi adicionado à Navbar, mantendo a consistência visual e facilitando a navegação direta até a seção.
