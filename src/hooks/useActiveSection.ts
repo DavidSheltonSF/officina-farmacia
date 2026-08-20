@@ -10,21 +10,39 @@ export function useActiveSection(sectionIds: string[]): string {
   const [activeId, setActiveId] = useState<string>(sectionIds[0] ?? '');
 
   useEffect(() => {
+    // Sections that will be observed
     const elements = sectionIds
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => el !== null);
 
     if (elements.length === 0) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    // Map that will store the sections ids and their viewport intersection ratio
+    const mapVisible = new Map<string, number>();
+    elements.forEach((el) => mapVisible.set(el.id, 0));
 
-        if (visible.length > 0) {
-          const id = visible[0]?.target.id;
-          if (id) setActiveId(id);
+    const observer = new IntersectionObserver(
+      // Contains the observed elements whose intersection state has changed since the last callback
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.id;
+
+          //update the map
+          mapVisible.set(id, entry.isIntersecting ? entry.intersectionRatio : 0);
+        });
+
+        // Find the most visible section
+        let highestRatio = 0;
+        let mostVisibleId = '';
+        mapVisible.forEach((ratio, id) => {
+          if (ratio > highestRatio) {
+            highestRatio = ratio;
+            mostVisibleId = id;
+          }
+        });
+
+        if (mostVisibleId) {
+          setActiveId(mostVisibleId);
         }
       },
       {
