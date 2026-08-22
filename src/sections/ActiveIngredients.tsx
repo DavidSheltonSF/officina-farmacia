@@ -37,7 +37,6 @@ export function ActiveIngredients() {
           align="center"
           title={title}
           description={description}
-          className="mx-auto"
         />
 
         <div className="mx-auto mt-10 max-w-xl">
