@@ -5,6 +5,15 @@ export const activeIngredientsSection: ActiveIngredientsSection = {
   title: 'Encontre o ativo prescrito na sua receita',
   description:
     'Consulte alguns dos principais ativos que manipulamos. Não encontrou o seu? Envie a receita e confirmamos a disponibilidade.',
+  categories: [
+    'Todos',
+    'Emagrecimento',
+    'Dermatologia',
+    'Capilar',
+    'Reposição Hormonal',
+    'Suplementação',
+    'Sono e Ansiedade',
+  ],
   activeIngredients: [
     {
       id: 'semaglutida',

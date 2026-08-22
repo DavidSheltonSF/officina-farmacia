@@ -9,21 +9,11 @@ import type { ActiveIngredientCategory } from '@/types';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 
-const categories: Array<ActiveIngredientCategory | 'Todos'> = [
-  'Todos',
-  'Emagrecimento',
-  'Dermatologia',
-  'Capilar',
-  'Reposição Hormonal',
-  'Suplementação',
-  'Sono e Ansiedade',
-];
-
 export function ActiveIngredients() {
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState<ActiveIngredientCategory | 'Todos'>('Todos');
 
-  const { eyebrow, title, description, activeIngredients } = activeIngredientsSection;
+  const { eyebrow, title, description, activeIngredients, categories } = activeIngredientsSection;
 
   const filteredIngredients = useMemo(() => {
     const normalizedQuery = normalizeSearchText(query);
