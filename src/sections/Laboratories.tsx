@@ -50,7 +50,7 @@ export function Laboratories() {
                 className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-300 transition-colors hover:text-brand-200"
               >
                 Saiba mais
-                <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                <ArrowUpRight className="size-4" aria-hidden="true" />
               </a>
             </motion.div>
           ))}
