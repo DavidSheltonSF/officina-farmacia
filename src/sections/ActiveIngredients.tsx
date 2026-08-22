@@ -89,7 +89,7 @@ export function ActiveIngredients() {
                 transition={{ duration: 0.2 }}
                 className="rounded-2xl border border-brand-100 bg-sand-50 p-5 transition-colors hover:border-brand-300"
               >
-                <div className="flex items-start justify-between gap-3">
+                <div className="flex items-start justify-between">
                   <h3 className="font-display text-base text-ink-900">{ingredient.name}</h3>
                   <Pill className="size-4.5 shrink-0 text-brand-500" aria-hidden="true" />
                 </div>
