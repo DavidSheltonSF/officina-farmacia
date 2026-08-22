@@ -1,4 +1,4 @@
-import { Differential } from '.';
+import { Differential, Laboratory } from '.';
 import { Pillar } from './pillars';
 
 export interface Section {
@@ -29,4 +29,8 @@ export interface AboutSection extends SectionWithImage {
 
 export interface DifferentialsSection extends Section {
   differentials: Differential[];
+}
+
+export interface LaboratoriesSection extends Section {
+  laboratories: Laboratory[]
 }
