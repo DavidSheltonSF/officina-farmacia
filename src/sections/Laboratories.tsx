@@ -30,8 +30,8 @@ export function Laboratories() {
               transition={{ duration: 0.45, ease: 'easeOut', delay: index * 0.06 }}
               className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-7 backdrop-blur-sm transition-colors duration-300 hover:border-brand-400/50 hover:bg-white/[0.06]"
             >
-              <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-brand-800">
-                <Image src={lab.logo} alt={`Logo do laboratório ${lab.name}`} width={48} height={48} className="h-full w-full object-cover" />
+              <span className="relative flex size-12 items-center justify-center overflow-hidden rounded-xl bg-brand-800">
+                <Image src={lab.logo} alt={`Logo do laboratório ${lab.name}`} fill className="h-full w-full object-cover" />
               </span>
               <h3 className="mt-5 font-display text-lg text-sand-50">{lab.name}</h3>
               <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-brand-300">{lab.specialty}</p>
