@@ -32,12 +32,7 @@ export function ActiveIngredients() {
   return (
     <section id="ativos" className="bg-white py-24 lg:py-32">
       <Container>
-        <SectionHeading
-          eyebrow={eyebrow}
-          align="center"
-          title={title}
-          description={description}
-        />
+        <SectionHeading eyebrow={eyebrow} align="center" title={title} description={description} />
 
         <div className="mx-auto mt-10 max-w-xl">
           <label htmlFor="ingredient-search" className="sr-only">
@@ -45,7 +40,7 @@ export function ActiveIngredients() {
           </label>
           <div className="relative">
             <Search
-              className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ink-300"
+              className="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2 text-ink-300"
               aria-hidden="true"
             />
             <input
@@ -96,7 +91,7 @@ export function ActiveIngredients() {
               >
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-display text-base text-ink-900">{ingredient.name}</h3>
-                  <Pill className="h-4.5 w-4.5 shrink-0 text-brand-500" aria-hidden="true" />
+                  <Pill className="size-4.5 shrink-0 text-brand-500" aria-hidden="true" />
                 </div>
                 <span className="mt-2 inline-block rounded-full bg-brand-100 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-brand-700">
                   {ingredient.category}
