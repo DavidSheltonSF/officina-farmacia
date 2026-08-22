@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Pill } from 'lucide-react';
-import { activeIngredients } from '@/data/activeIngredients';
+import { activeIngredientsSection } from '@/data/activeIngredients';
 import { normalizeSearchText, cn } from '@/lib/utils';
 import type { ActiveIngredientCategory } from '@/types';
 import { Container } from '@/components/ui/Container';
@@ -22,6 +22,8 @@ const categories: Array<ActiveIngredientCategory | 'Todos'> = [
 export function ActiveIngredients() {
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState<ActiveIngredientCategory | 'Todos'>('Todos');
+
+  const { activeIngredients } = activeIngredientsSection;
 
   const filteredIngredients = useMemo(() => {
     const normalizedQuery = normalizeSearchText(query);
@@ -53,7 +55,10 @@ export function ActiveIngredients() {
             Pesquisar ativo
           </label>
           <div className="relative">
-            <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ink-300" aria-hidden="true" />
+            <Search
+              className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ink-300"
+              aria-hidden="true"
+            />
             <input
               id="ingredient-search"
               type="search"
@@ -65,7 +70,11 @@ export function ActiveIngredients() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-wrap justify-center gap-2" role="group" aria-label="Filtrar por categoria">
+        <div
+          className="mt-6 flex flex-wrap justify-center gap-2"
+          role="group"
+          aria-label="Filtrar por categoria"
+        >
           {categories.map((item) => (
             <button
               key={item}
@@ -103,7 +112,9 @@ export function ActiveIngredients() {
                 <span className="mt-2 inline-block rounded-full bg-brand-100 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-brand-700">
                   {ingredient.category}
                 </span>
-                <p className="mt-3 text-sm leading-relaxed text-ink-500">{ingredient.description}</p>
+                <p className="mt-3 text-sm leading-relaxed text-ink-500">
+                  {ingredient.description}
+                </p>
               </motion.div>
             ))}
           </AnimatePresence>
@@ -111,7 +122,8 @@ export function ActiveIngredients() {
 
         {filteredIngredients.length === 0 && (
           <p className="mt-10 text-center text-sm text-ink-500">
-            Nenhum ativo encontrado para essa busca. Envie sua receita e confirmamos a disponibilidade para você.
+            Nenhum ativo encontrado para essa busca. Envie sua receita e confirmamos a
+            disponibilidade para você.
           </p>
         )}
       </Container>
