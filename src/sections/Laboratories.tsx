@@ -17,7 +17,6 @@ export function Laboratories() {
           align="center"
           title="Ativos de procedência garantida, direto dos melhores laboratórios"
           description="Selecionamos parceiros certificados que compartilham nosso compromisso com pureza, estabilidade e rastreabilidade."
-          className="mx-auto"
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
