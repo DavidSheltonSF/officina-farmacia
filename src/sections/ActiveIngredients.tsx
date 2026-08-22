@@ -23,7 +23,7 @@ export function ActiveIngredients() {
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState<ActiveIngredientCategory | 'Todos'>('Todos');
 
-  const { activeIngredients } = activeIngredientsSection;
+  const { eyebrow, title, description, activeIngredients } = activeIngredientsSection;
 
   const filteredIngredients = useMemo(() => {
     const normalizedQuery = normalizeSearchText(query);
@@ -43,10 +43,10 @@ export function ActiveIngredients() {
     <section id="ativos" className="bg-white py-24 lg:py-32">
       <Container>
         <SectionHeading
-          eyebrow="Ativos manipulados"
+          eyebrow={eyebrow}
           align="center"
-          title="Encontre o ativo prescrito na sua receita"
-          description="Consulte alguns dos principais ativos que manipulamos. Não encontrou o seu? Envie a receita e confirmamos a disponibilidade."
+          title={title}
+          description={description}
           className="mx-auto"
         />
 
