@@ -31,10 +31,6 @@ export interface DifferentialsSection extends Section {
   differentials: Differential[];
 }
 
-export interface LaboratoriesSection extends Section {
-  laboratories: Laboratory[];
-}
-
 export interface ActiveIngredientsSection extends Section {
   categories: Array<ActiveIngredientCategory | 'Todos'>;
 }
