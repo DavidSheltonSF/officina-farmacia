@@ -3,12 +3,13 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import { laboratoriesSection } from '@/data/laboratories';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { laboratories } from '@/data/laboratories';
+import { laboratoriesSection } from '@/data/sections/laboratories';
 
 export function Laboratories() {
-  const { eyebrow, title, description, laboratories } = laboratoriesSection;
+  const { eyebrow, title, description } = laboratoriesSection;
   return (
     <section id="laboratorios" className="bg-brand-950 py-24 text-sand-50 lg:py-32">
       <Container>
