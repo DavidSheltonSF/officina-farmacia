@@ -32,8 +32,8 @@ export function HowItWorks() {
                 transition={{ duration: 0.45, ease: 'easeOut', delay: index * 0.1 }}
                 className="relative flex flex-col items-center text-center"
               >
-                <span className="relative z-10 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full border-4 border-sand-100 bg-brand-800 text-sand-50 shadow-card">
-                  <step.icon className="h-6 w-6" aria-hidden="true" />
+                <span className="relative z-10 flex size-4.5 items-center justify-center rounded-full border-4 border-sand-100 bg-brand-800 text-sand-50 shadow-card">
+                  <step.icon className="size-6" aria-hidden="true" />
                 </span>
                 <span className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-brand-600">
                   Passo {step.order}
