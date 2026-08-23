@@ -33,17 +33,17 @@ export function Units() {
 
               <div className="mt-4 space-y-3 text-sm text-ink-500">
                 <p className="flex items-start gap-2.5">
-                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-500" aria-hidden="true" />
+                  <MapPin className="mt-0.5 size-4 shrink-0 text-brand-500" aria-hidden="true" />
                   <span>
                     {unit.address}, {unit.neighborhood} — {unit.city}/{unit.state}
                   </span>
                 </p>
                 <p className="flex items-center gap-2.5">
-                  <Phone className="h-4 w-4 shrink-0 text-brand-500" aria-hidden="true" />
+                  <Phone className="size-4 shrink-0 text-brand-500" aria-hidden="true" />
                   {unit.phone}
                 </p>
                 <p className="flex items-start gap-2.5">
-                  <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-500" aria-hidden="true" />
+                  <Clock className="mt-0.5 size-4 shrink-0 text-brand-500" aria-hidden="true" />
                   <span>
                     Seg. a Sex.: {unit.hours.weekdays}
                     <br />
@@ -60,7 +60,7 @@ export function Units() {
                   rel="noopener noreferrer"
                   variant="outline"
                   size="md"
-                  icon={<Navigation className="h-4 w-4" aria-hidden="true" />}
+                  icon={<Navigation className="size-4" aria-hidden="true" />}
                   className="w-full"
                 >
                   Google Maps
@@ -71,7 +71,7 @@ export function Units() {
                   target="_blank"
                   rel="noopener noreferrer"
                   size="md"
-                  icon={<MessageCircle className="h-4 w-4" aria-hidden="true" />}
+                  icon={<MessageCircle className="size-4" aria-hidden="true" />}
                   className="w-full"
                 >
                   WhatsApp
