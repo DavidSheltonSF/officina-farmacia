@@ -23,8 +23,8 @@ export function About() {
         >
           <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-lift">
             <Image
-              src={image.src}
-              alt={image.alt}
+              src={image?.src ?? ''}
+              alt={image?.alt ?? ''}
               fill
               sizes="(min-width: 1024px) 40vw, 90vw"
               className="object-cover"
