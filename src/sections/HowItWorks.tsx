@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { howItWorksSection } from '@/data/howItWorksSection';
+import { howItWorksSection } from '@/data/howItWorks';
 
 export function HowItWorks() {
   const { eyebrow, title, description, processSteps } = howItWorksSection;
