@@ -1,4 +1,10 @@
-import { ActiveIngredient, ActiveIngredientCategory, Differential, Laboratory } from '.';
+import {
+  ActiveIngredient,
+  ActiveIngredientCategory,
+  Differential,
+  Laboratory,
+  ProcessStep,
+} from '.';
 import { Pillar } from './pillars';
 
 export interface Section {
@@ -37,5 +43,9 @@ export interface LaboratoriesSection extends Section {
 
 export interface ActiveIngredientsSection extends Section {
   activeIngredients: ActiveIngredient[];
-  categories: Array<ActiveIngredientCategory | 'Todos'>
+  categories: Array<ActiveIngredientCategory | 'Todos'>;
+}
+
+export interface HowItWorksSection extends Section {
+  processSteps: ProcessStep[];
 }
