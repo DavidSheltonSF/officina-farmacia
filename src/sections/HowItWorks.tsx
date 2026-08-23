@@ -1,19 +1,20 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { processSteps } from '@/data/steps';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { howItWorksSection } from '@/data/howItWorksSection';
 
 export function HowItWorks() {
+  const { eyebrow, title, description, processSteps } = howItWorksSection;
   return (
     <section id="como-funciona" className="bg-sand-100 py-24 lg:py-32">
       <Container>
         <SectionHeading
-          eyebrow="Como funciona"
+          eyebrow={eyebrow}
           align="center"
-          title="Da receita à sua porta, em cinco passos simples"
-          description="Um processo pensado para ser rápido, transparente e sem burocracia do início ao fim."
+          title={title}
+          description={description}
           className="mx-auto"
         />
 
@@ -39,7 +40,9 @@ export function HowItWorks() {
                   Passo {step.order}
                 </span>
                 <h3 className="mt-2 font-display text-lg text-ink-900">{step.title}</h3>
-                <p className="mt-2 max-w-[15rem] text-sm leading-relaxed text-ink-500">{step.description}</p>
+                <p className="mt-2 max-w-[15rem] text-sm leading-relaxed text-ink-500">
+                  {step.description}
+                </p>
               </motion.li>
             ))}
           </ol>
