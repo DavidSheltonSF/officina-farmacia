@@ -1,6 +1,7 @@
 import { siteConfig } from '@/lib/config';
 import { units } from '@/data/units';
 import { faqItems } from '@/data/faq';
+import { business } from '@/data/business';
 
 export function buildOrganizationSchema() {
   return {
@@ -9,7 +10,7 @@ export function buildOrganizationSchema() {
     name: siteConfig.name,
     url: siteConfig.url,
     logo: `${siteConfig.url}/logo.png`,
-    email: siteConfig.email,
+    email: business.email,
     sameAs: [
       'https://instagram.com/officinamanipulacao',
       'https://facebook.com/officinamanipulacao',
@@ -26,7 +27,7 @@ export function buildLocalBusinessSchema() {
     name: `${siteConfig.name} - ${unit.name}`,
     image: `${siteConfig.url}/og-image.jpg`,
     telephone: unit.phone,
-    email: siteConfig.email,
+    email: business.email,
     address: {
       '@type': 'PostalAddress',
       streetAddress: unit.address,
