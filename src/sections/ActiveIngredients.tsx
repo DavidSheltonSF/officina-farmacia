@@ -3,7 +3,8 @@
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Pill } from 'lucide-react';
-import { activeIngredientsSection } from '@/data/activeIngredients';
+import { activeIngredients } from '@/data/activeIngredients';
+import { activeIngredientsSection } from '@/data/sections/activeIngredients';
 import { normalizeSearchText, cn } from '@/lib/utils';
 import type { ActiveIngredientCategory } from '@/types';
 import { Container } from '@/components/ui/Container';
@@ -13,7 +14,7 @@ export function ActiveIngredients() {
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState<ActiveIngredientCategory | 'Todos'>('Todos');
 
-  const { eyebrow, title, description, activeIngredients, categories } = activeIngredientsSection;
+  const { eyebrow, title, description, categories } = activeIngredientsSection;
 
   const filteredIngredients = useMemo(() => {
     const normalizedQuery = normalizeSearchText(query);
