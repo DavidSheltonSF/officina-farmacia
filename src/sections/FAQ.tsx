@@ -47,7 +47,7 @@ export function FAQ() {
                     </span>
                     <ChevronDown
                       className={cn(
-                        'h-5 w-5 shrink-0 text-brand-600 transition-transform duration-300',
+                        'size-5 shrink-0 text-brand-600 transition-transform duration-300',
                         isOpen && 'rotate-180'
                       )}
                       aria-hidden="true"
