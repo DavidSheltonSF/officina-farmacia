@@ -1,12 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { differentialsSection } from '@/data/differentials';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { differentials } from '@/data/differentials';
+
+import { differentialsSection } from '@/data/sections/differentials';
 
 export function Differentials() {
-  const { eyebrow, title, description, differentials } = differentialsSection;
+  const { eyebrow, title, description } = differentialsSection;
 
   return (
     <section id="diferenciais" className="bg-sand-100 py-24 lg:py-32">
