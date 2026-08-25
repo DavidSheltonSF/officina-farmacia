@@ -4,10 +4,11 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { aboutSection } from '@/data/about';
 import { business } from '@/data/business';
+import { pillars } from '@/data/pillars';
+import { aboutSection } from '@/data/sections/about';
 
-const { eyebrow, title, description, pillars, image } = aboutSection;
+const { eyebrow, title, description, image } = aboutSection;
 const yearsOfOperation = new Date().getFullYear() - business.foundedYear;
 
 export function About() {
