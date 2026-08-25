@@ -2,22 +2,20 @@
 
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Clock, Navigation, MessageCircle } from 'lucide-react';
-import { units } from '@/data/units';
 import { buildUnitWhatsAppUrl } from '@/services/whatsapp';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
+import { units } from '@/data/units';
+import { unitsSection } from '@/data/sections/units';
 
 export function Units() {
+  const { eyebrow, title, description } = unitsSection;
+
   return (
     <section id="unidades" className="bg-white py-24 lg:py-32">
       <Container>
-        <SectionHeading
-          eyebrow="Unidades"
-          align="center"
-          title="Encontre a unidade Officina mais perto de você"
-          description="Atendimento presencial ou retirada rápida em qualquer uma das nossas unidades no Rio de Janeiro e Niterói."
-        />
+        <SectionHeading eyebrow={eyebrow} align="center" title={title} description={description} />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {units.map((unit, index) => (
