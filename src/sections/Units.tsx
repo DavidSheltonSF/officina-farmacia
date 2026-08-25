@@ -25,7 +25,7 @@ export function Units() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.45, ease: 'easeOut', delay: index * 0.06 }}
-              className="flex flex-col rounded-2xl border border-brand-100 bg-sand-50 p-6 shadow-soft"
+              className="flex h-[22rem] flex-col rounded-2xl border border-brand-100 bg-sand-50 p-6 shadow-soft"
             >
               <h3 className="font-display text-lg text-ink-900">{unit.name}</h3>
 
@@ -50,7 +50,7 @@ export function Units() {
                 </p>
               </div>
 
-              <div className="mt-6 flex flex-col gap-2.5">
+              <div className="mt-auto flex flex-col gap-2.5">
                 <Button
                   as="a"
                   href={unit.mapsUrl}
