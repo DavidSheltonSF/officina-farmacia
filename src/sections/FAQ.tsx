@@ -4,11 +4,13 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { faqItems } from '@/data/faq';
+import { faqSection } from '@/data/sections/faq';
 import { cn } from '@/lib/utils';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 
 export function FAQ() {
+  const { eyebrow, title, description } = faqSection;
   const [openId, setOpenId] = useState<string | null>(faqItems[0]?.id ?? null);
 
   const toggle = (id: string) => {
@@ -19,10 +21,10 @@ export function FAQ() {
     <section id="faq" className="bg-sand-100 py-24 lg:py-32">
       <Container className="mx-auto max-w-3xl">
         <SectionHeading
-          eyebrow="FAQ"
+          eyebrow={eyebrow}
           align="center"
-          title="Perguntas frequentes"
-          description="Reunimos as dúvidas mais comuns sobre manipulação, prazos e formas de atendimento."
+          title={title}
+          description={description}
           className="mx-auto"
         />
 
@@ -40,7 +42,9 @@ export function FAQ() {
                     id={`faq-trigger-${item.id}`}
                     className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                   >
-                    <span className="font-display text-base text-ink-900 sm:text-lg">{item.question}</span>
+                    <span className="font-display text-base text-ink-900 sm:text-lg">
+                      {item.question}
+                    </span>
                     <ChevronDown
                       className={cn(
                         'h-5 w-5 shrink-0 text-brand-600 transition-transform duration-300',
@@ -62,7 +66,9 @@ export function FAQ() {
                       transition={{ duration: 0.25, ease: 'easeInOut' }}
                       className="overflow-hidden"
                     >
-                      <p className="px-6 pb-6 text-sm leading-relaxed text-ink-500">{item.answer}</p>
+                      <p className="px-6 pb-6 text-sm leading-relaxed text-ink-500">
+                        {item.answer}
+                      </p>
                     </motion.div>
                   )}
                 </AnimatePresence>
