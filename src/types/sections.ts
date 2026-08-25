@@ -23,10 +23,6 @@ export interface HeroSection extends SectionWithImage {
   };
 }
 
-export interface AboutSection extends SectionWithImage {
-  pillars: Pillar[];
-}
-
 export interface ActiveIngredientsSection extends Section {
   categories: Array<ActiveIngredientCategory | 'Todos'>;
 }
