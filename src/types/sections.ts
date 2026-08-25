@@ -27,10 +27,6 @@ export interface AboutSection extends SectionWithImage {
   pillars: Pillar[];
 }
 
-export interface DifferentialsSection extends Section {
-  differentials: Differential[];
-}
-
 export interface ActiveIngredientsSection extends Section {
   categories: Array<ActiveIngredientCategory | 'Todos'>;
 }
