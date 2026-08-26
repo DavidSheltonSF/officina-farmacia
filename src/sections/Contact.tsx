@@ -8,10 +8,11 @@ import { units } from '@/data/units';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
+import { business } from '@/data/business';
 
 const contactMethods = [
-  { icon: Phone, label: 'Telefone', value: siteConfig.phoneDisplay },
-  { icon: Mail, label: 'E-mail', value: siteConfig.email },
+  { icon: Phone, label: 'Telefone', value: business.phoneDisplay },
+  { icon: Mail, label: 'E-mail', value: business.email },
   { icon: Clock, label: 'Horário', value: 'Seg. a Sex.: 08h às 19h · Sáb.: 08h às 13h' },
 ];
 
