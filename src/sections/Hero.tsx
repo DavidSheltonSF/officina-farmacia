@@ -51,6 +51,7 @@ export function Hero() {
               priority
               sizes="(min-width: 1024px) 40vw, 90vw"
               className="object-cover"
+              loading="eager"
             />
           </div>
 
