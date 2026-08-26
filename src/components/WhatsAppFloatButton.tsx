@@ -16,10 +16,10 @@ export function WhatsAppFloatButton() {
       transition={{ delay: 1, duration: 0.4, ease: 'easeOut' }}
       whileHover={{ scale: 1.06 }}
       whileTap={{ scale: 0.96 }}
-      className="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lift sm:bottom-7 sm:right-7"
+      className="fixed bottom-5 right-5 z-40 flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lift sm:bottom-7 sm:right-7"
       aria-label="Falar com a Officina pelo WhatsApp"
     >
-      <MessageCircle className="h-7 w-7" aria-hidden="true" fill="currentColor" strokeWidth={0} />
+      <MessageCircle className="size-7" aria-hidden="true" fill="currentColor" strokeWidth={0} />
       <span className="sr-only">Enviar mensagem no WhatsApp</span>
     </motion.a>
   );

@@ -36,7 +36,7 @@ export function Laboratories() {
                   src={lab.logo}
                   alt={`Logo do laboratório ${lab.name}`}
                   fill
-                  className="h-full w-full object-cover"
+                  className="size-full object-cover"
                 />
               </span>
               <h3 className="mt-5 font-display text-lg text-sand-50">{lab.name}</h3>

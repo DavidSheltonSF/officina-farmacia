@@ -54,7 +54,7 @@ export function Navbar() {
             className="flex items-center gap-2.5"
             aria-label={`${siteConfig.name} - Início`}
           >
-            <Logo/>
+            <Logo />
             <span className="font-display text-lg font-semibold text-ink-900">
               {siteConfig.shortName}
             </span>
@@ -95,15 +95,15 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full text-ink-900 lg:hidden"
+            className="inline-flex size-11 items-center justify-center rounded-full text-ink-900 lg:hidden"
             aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
           >
             {isOpen ? (
-              <X className="h-6 w-6" aria-hidden="true" />
+              <X className="size-6" aria-hidden="true" />
             ) : (
-              <Menu className="h-6 w-6" aria-hidden="true" />
+              <Menu className="size-6" aria-hidden="true" />
             )}
           </button>
         </nav>

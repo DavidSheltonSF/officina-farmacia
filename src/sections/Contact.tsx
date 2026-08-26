@@ -40,8 +40,8 @@ export function Contact() {
           <div className="mt-9 space-y-5">
             {contactMethods.map((method) => (
               <div key={method.label} className="flex items-center gap-4">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700">
-                  <method.icon className="h-5 w-5" aria-hidden="true" />
+                <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+                  <method.icon className="size-5" aria-hidden="true" />
                 </span>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-ink-300">
@@ -60,7 +60,7 @@ export function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               size="lg"
-              icon={<MessageCircle className="h-4 w-4" aria-hidden="true" />}
+              icon={<MessageCircle className="size-4" aria-hidden="true" />}
             >
               Falar no WhatsApp
             </Button>
@@ -71,7 +71,7 @@ export function Contact() {
               rel="noopener noreferrer"
               variant="outline"
               size="lg"
-              icon={<FileText className="h-4 w-4" aria-hidden="true" />}
+              icon={<FileText className="size-4" aria-hidden="true" />}
             >
               Enviar Receita
             </Button>
@@ -94,7 +94,7 @@ export function Contact() {
               style={{ border: 0, minHeight: 420 }}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="h-full min-h-[420px] w-full"
+              className="size-full min-h-[420px]"
             />
           )}
         </motion.div>

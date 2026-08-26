@@ -26,10 +26,15 @@ export function SectionHeading({
       <span
         className={cn(
           'inline-flex items-center gap-2 rounded-full border px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.18em]',
-          isDark ? 'border-brand-300/40 text-brand-200' : 'border-brand-300 text-brand-700 bg-brand-100'
+          isDark
+            ? 'border-brand-300/40 text-brand-200'
+            : 'border-brand-300 text-brand-700 bg-brand-100'
         )}
       >
-        <span className={cn('h-1.5 w-1.5 rounded-full', isDark ? 'bg-brand-300' : 'bg-brand-500')} aria-hidden="true" />
+        <span
+          className={cn('size-1.5 rounded-full', isDark ? 'bg-brand-300' : 'bg-brand-500')}
+          aria-hidden="true"
+        />
         {eyebrow}
       </span>
       <h2
@@ -41,7 +46,12 @@ export function SectionHeading({
         {title}
       </h2>
       {description && (
-        <p className={cn('mt-4 text-base leading-relaxed sm:text-lg', isDark ? 'text-sand-200/80' : 'text-ink-500')}>
+        <p
+          className={cn(
+            'mt-4 text-base leading-relaxed sm:text-lg',
+            isDark ? 'text-sand-200/80' : 'text-ink-500'
+          )}
+        >
           {description}
         </p>
       )}
