@@ -26,7 +26,7 @@ export function IconWrapper({
   className,
   children,
 }: PropsWithChildren<Props>) {
-  const baseStyles = `flex items-center justify-center shrink-0 p-3 ${shapeStyles[shape]} ${colorStyles[color]}`;
+  const baseStyles = `flex items-center justify-center shrink-0 p-3 h-fit w-fit ${shapeStyles[shape]} ${colorStyles[color]}`;
 
   return <span className={cn(baseStyles, className)}>{children}</span>;
 }
