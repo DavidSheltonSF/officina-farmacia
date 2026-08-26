@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { howItWorksSection } from '@/data/sections/howItWorks';
+import { IconWrapper } from '@/components/ui/IconWrapper';
 
 export function HowItWorks() {
   const { eyebrow, title, description, processSteps } = howItWorksSection;
@@ -33,9 +34,9 @@ export function HowItWorks() {
                 transition={{ duration: 0.45, ease: 'easeOut', delay: index * 0.1 }}
                 className="relative flex flex-col items-center text-center"
               >
-                <span className="relative z-10 flex size-[4.5rem] items-center justify-center rounded-full border-4 border-sand-100 bg-brand-800 text-sand-50 shadow-card">
+                <IconWrapper color='dark' className="p-5">
                   <step.icon className="size-6" aria-hidden="true" />
-                </span>
+                </IconWrapper>
                 <span className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-brand-600">
                   Passo {step.order}
                 </span>

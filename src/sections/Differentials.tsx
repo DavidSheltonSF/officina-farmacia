@@ -6,6 +6,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { differentials } from '@/data/differentials';
 
 import { differentialsSection } from '@/data/sections/differentials';
+import { IconWrapper } from '@/components/ui/IconWrapper';
 
 export function Differentials() {
   const { eyebrow, title, description } = differentialsSection;
@@ -25,9 +26,9 @@ export function Differentials() {
               transition={{ duration: 0.45, ease: 'easeOut', delay: index * 0.06 }}
               className="group rounded-2xl border border-brand-200/70 bg-white p-7 shadow-soft hover:shadow-card"
             >
-              <span className="flex size-12 items-center justify-center rounded-xl bg-brand-800 text-sand-50 transition-colors duration-300 group-hover:bg-brand-600">
+              <IconWrapper shape='square' color='dark'>
                 <item.icon className="size-5" aria-hidden="true" />
-              </span>
+              </IconWrapper>
               <h3 className="mt-5 font-display text-lg text-ink-900">{item.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-ink-500">{item.description}</p>
             </motion.div>

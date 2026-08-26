@@ -10,6 +10,7 @@ import { contactSection } from '@/data/sections/contact';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
+import { IconWrapper } from '@/components/ui/IconWrapper';
 
 export function Contact() {
   const mainUnit = units[0];
@@ -35,9 +36,9 @@ export function Contact() {
           <div className="mt-9 space-y-5">
             {contactMethods.map((method) => (
               <div key={method.label} className="flex items-center gap-4">
-                <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+                <IconWrapper>
                   <method.icon className="size-5" aria-hidden="true" />
-                </span>
+                </IconWrapper>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-ink-300">
                     {method.label}

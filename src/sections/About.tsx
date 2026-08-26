@@ -7,6 +7,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { business } from '@/data/business';
 import { pillars } from '@/data/pillars';
 import { aboutSection } from '@/data/sections/about';
+import { IconWrapper } from '@/components/ui/IconWrapper';
 
 const { eyebrow, title, description, image } = aboutSection;
 const yearsOfOperation = new Date().getFullYear() - business.foundedYear;
@@ -49,9 +50,9 @@ export function About() {
           <div className="mt-10 space-y-7">
             {pillars.map((pillar) => (
               <div key={pillar.title} className="flex gap-4">
-                <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+                <IconWrapper>
                   <pillar.icon className="size-5" aria-hidden="true" />
-                </span>
+                </IconWrapper>
                 <div>
                   <h3 className="font-display text-lg text-ink-900">{pillar.title}</h3>
                   <p className="mt-1 text-sm leading-relaxed text-ink-500">{pillar.description}</p>

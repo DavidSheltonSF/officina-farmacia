@@ -1,9 +1,10 @@
 import { FlaskConical } from 'lucide-react';
+import { IconWrapper } from './ui/IconWrapper';
 
 export function Logo() {
   return (
-    <span className="flex size-10 items-center justify-center rounded-full bg-brand-800 text-sand-50">
+    <IconWrapper color='dark' >
       <FlaskConical className="size-5" aria-hidden="true" />
-    </span>
+    </IconWrapper>
   );
 }
