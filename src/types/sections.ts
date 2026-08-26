@@ -8,7 +8,7 @@ export interface Section {
 }
 
 export interface SectionWithImage extends Section {
-  image?: {
+  image: {
     src: string;
     alt: string;
   };
