@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { ArrowRight, MapPin, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
@@ -15,11 +14,7 @@ export function Hero() {
   return (
     <section id="inicio" className="overflow-hidden bg-sand-50 pt-32 pb-20 lg:pb-28">
       <Container className="grid items-center gap-14 lg:grid-cols-2 lg:gap-10">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-        >
+        <div>
           <SectionHeading eyebrow={eyebrow} title={title} description={description} />
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -45,13 +40,9 @@ export function Hero() {
               </li>
             ))}
           </ul>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.94 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.15 }}
-        >
+        <div>
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-lift sm:aspect-[5/5.5]">
             <Image
               src={image.src}
@@ -73,7 +64,7 @@ export function Hero() {
               {delivery.description}
             </p>
           </div>
-        </motion.div>
+        </div>
       </Container>
     </section>
   );
