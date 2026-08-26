@@ -1,20 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Phone, Mail, Clock, MessageCircle, FileText } from 'lucide-react';
+import { MessageCircle, FileText } from 'lucide-react';
 import { whatsappConfig } from '@/lib/config';
 import { buildWhatsAppUrl } from '@/services/whatsapp';
 import { units } from '@/data/units';
+import { contactMethods } from '@/data/contact';
+import { contactSection } from '@/data/sections/contact';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
-import { business } from '@/data/business';
-
-const contactMethods = [
-  { icon: Phone, label: 'Telefone', value: business.phoneDisplay },
-  { icon: Mail, label: 'E-mail', value: business.email },
-  { icon: Clock, label: 'Horário', value: 'Seg. a Sex.: 08h às 19h · Sáb.: 08h às 13h' },
-];
 
 export function Contact() {
   const mainUnit = units[0];
@@ -32,9 +27,9 @@ export function Contact() {
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
           <SectionHeading
-            eyebrow="Contato"
-            title="Fale com a nossa equipe farmacêutica"
-            description="Estamos disponíveis para tirar dúvidas sobre sua receita, orçamento ou acompanhamento de pedido."
+            eyebrow={contactSection.eyebrow}
+            title={contactSection.title}
+            description={contactSection.description}
           />
 
           <div className="mt-9 space-y-5">
