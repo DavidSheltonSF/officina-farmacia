@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Phone, Mail, Clock, MessageCircle, FileText } from 'lucide-react';
-import { siteConfig, whatsappConfig } from '@/lib/config';
+import { whatsappConfig } from '@/lib/config';
 import { buildWhatsAppUrl } from '@/services/whatsapp';
 import { units } from '@/data/units';
 import { Container } from '@/components/ui/Container';
@@ -44,7 +44,9 @@ export function Contact() {
                   <method.icon className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-ink-300">{method.label}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-ink-300">
+                    {method.label}
+                  </p>
                   <p className="text-sm font-medium text-ink-900">{method.value}</p>
                 </div>
               </div>
