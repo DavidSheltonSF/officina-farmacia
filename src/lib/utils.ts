@@ -1,4 +1,4 @@
-type ClassValue = string | number | null | boolean | undefined;
+type ClassValue = string | null | boolean | undefined;
 
 /**
  * Combina classes condicionalmente, ignorando valores falsy.
@@ -15,6 +15,6 @@ export function normalizeSearchText(value: string): string {
   return value
     .toLowerCase() // Torna minúscula
     .normalize('NFD') // Separa caracteres de acentos
-    .replace(/[\u0300-\u036f]/g, '')  // Remove acentos
+    .replace(/[\u0300-\u036f]/g, '') // Remove acentos
     .trim(); // Remove espaços laterais
 }
