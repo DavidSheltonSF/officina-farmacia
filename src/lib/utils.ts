@@ -13,8 +13,8 @@ export function cn(...classes: ClassValue[]): string {
  */
 export function normalizeSearchText(value: string): string {
   return value
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .trim();
+    .toLowerCase() // Torna minúscula
+    .normalize('NFD') // Separa caracteres de acentos
+    .replace(/[\u0300-\u036f]/g, '')  // Remove acentos
+    .trim(); // Remove espaços laterais
 }
