@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 import { whatsappConfig } from '@/lib/config';
-import { buildWhatsAppUrl } from '@/services/whatsapp';
+import { buildWhatsAppUrl } from '@/lib/whatsapp';
 
 export function WhatsAppFloatButton() {
   return (

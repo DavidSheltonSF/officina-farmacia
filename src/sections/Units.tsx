@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Clock, Navigation, MessageCircle } from 'lucide-react';
-import { buildUnitWhatsAppUrl } from '@/services/whatsapp';
+import { buildUnitWhatsAppUrl } from '@/lib/whatsapp';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';

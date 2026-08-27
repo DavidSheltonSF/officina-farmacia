@@ -1,4 +1,4 @@
-import { buildWhatsAppUrl } from '@/services/whatsapp';
+import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import { Button, ButtonProps } from './ui/Button';
 import { whatsappConfig } from '@/lib/config';
 import { PropsWithChildren, ReactNode } from 'react';
