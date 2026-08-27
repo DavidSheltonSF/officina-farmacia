@@ -1,7 +1,6 @@
 /**
- * Configuração central da aplicação.
- * Números, mensagens e metadados vivem aqui para facilitar manutenção
- * e uma futura migração para um CMS.
+ * Configurações globais da aplicação.
+ * Centraliza informações que são compartilhadas entre diferentes partes do site.
  */
 
 export const siteConfig = {
