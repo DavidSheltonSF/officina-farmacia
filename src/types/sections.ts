@@ -1,4 +1,4 @@
-import { ActiveIngredientCategory, ProcessStep } from '.';
+import type { ActiveIngredientCategory, ProcessStep } from '.';
 
 export interface Section {
   eyebrow: string;
