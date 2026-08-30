@@ -4,7 +4,8 @@ import { HeartHandshake, Sparkles, Target } from 'lucide-react';
 export const pillars: Pillar[] = [
   {
     title: 'História',
-    description: `Nascemos em 2011 a partir do encontro entre farmacêuticos e médicos que acreditavam em um cuidado mais individual. Hoje somos referência em manipulação magistral no Rio de Janeiro.`,
+    description:
+      'Nascemos em 2011 a partir do encontro entre farmacêuticos e médicos que acreditavam em um cuidado mais individual. Hoje somos referência em manipulação magistral no Rio de Janeiro.',
     icon: Sparkles,
   },
   {
