@@ -1,5 +1,4 @@
-import { ActiveIngredient, ActiveIngredientCategory } from "@/types";
-
+import { ActiveIngredient } from '@/types';
 
 export const activeIngredients: ActiveIngredient[] = [
   {
