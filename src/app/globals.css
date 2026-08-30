@@ -6,10 +6,6 @@
   color-scheme: light;
 }
 
-* {
-  scroll-behavior: smooth;
-}
-
 @media (prefers-reduced-motion: reduce) {
   * {
     scroll-behavior: auto;
@@ -21,6 +17,7 @@
 
 html {
   scroll-padding-top: 88px;
+  scroll-behavior: smooth;
 }
 
 body {
