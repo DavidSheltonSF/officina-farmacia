@@ -1,4 +1,4 @@
-import { Pillar } from '@/types/pillar';
+import type { Pillar } from '@/types/pillar';
 import { HeartHandshake, Sparkles, Target } from 'lucide-react';
 
 export const pillars: Pillar[] = [
