@@ -1,5 +1,4 @@
-import { ActiveIngredientCategory, Differential, Laboratory, ProcessStep } from '.';
-import { Pillar } from './pillars';
+import { ActiveIngredientCategory, ProcessStep } from '.';
 
 export interface Section {
   eyebrow: string;
