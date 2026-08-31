@@ -1,4 +1,4 @@
-import { ActiveIngredient } from '@/types';
+import type { ActiveIngredient } from '@/types';
 
 export const activeIngredients: ActiveIngredient[] = [
   {
