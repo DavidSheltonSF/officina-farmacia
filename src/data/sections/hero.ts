@@ -1,4 +1,4 @@
-import { HeroSection } from '@/types/sections';
+import type { HeroSection } from '@/types/sections';
 
 export const heroSection: HeroSection = {
   eyebrow: 'Farmácia de manipulação',
