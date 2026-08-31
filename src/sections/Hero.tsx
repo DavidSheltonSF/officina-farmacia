@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
-import { heroSection } from '@/data/hero';
+import { heroSection } from '@/data/sections/hero';
 
 export function Hero() {
   const { indicators, eyebrow, title, description, image, delivery } = heroSection;
