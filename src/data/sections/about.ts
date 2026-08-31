@@ -1,4 +1,4 @@
-import { SectionWithImage } from '@/types/sections';
+import type { SectionWithImage } from '@/types/sections';
 
 export const aboutSection: SectionWithImage = {
   eyebrow: 'Sobre a Officina',
