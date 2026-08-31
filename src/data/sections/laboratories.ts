@@ -1,4 +1,4 @@
-import { Section } from '@/types/sections';
+import type { Section } from '@/types/sections';
 
 export const laboratoriesSection: Section = {
   eyebrow: 'Laboratórios parceiros',
