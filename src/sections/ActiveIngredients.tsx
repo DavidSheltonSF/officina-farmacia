@@ -6,15 +6,16 @@ import { Search, Pill } from 'lucide-react';
 import { activeIngredients } from '@/data/activeIngredients';
 import { activeIngredientsSection } from '@/data/sections/activeIngredients';
 import { normalizeSearchText, cn } from '@/lib/utils';
-import type { ActiveIngredientCategory } from '@/types';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { activeIngredientCategories } from '@/data/activeIngredientsCategories';
 
 export function ActiveIngredients() {
   const [query, setQuery] = useState('');
-  const [category, setCategory] = useState<ActiveIngredientCategory | 'Todos'>('Todos');
+  const [category, setCategory] = useState<string>('Todos');
+  const categories = ['Todos', ...activeIngredientCategories];
 
-  const { eyebrow, title, description, categories } = activeIngredientsSection;
+  const { eyebrow, title, description } = activeIngredientsSection;
 
   const filteredIngredients = useMemo(() => {
     const normalizedQuery = normalizeSearchText(query);
