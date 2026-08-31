@@ -1,4 +1,4 @@
-import type { ActiveIngredientCategory, ProcessStep } from '.';
+import type { ProcessStep } from '.';
 
 export interface Section {
   eyebrow: string;
@@ -23,7 +23,7 @@ export interface HeroSection extends SectionWithImage {
 }
 
 export interface ActiveIngredientsSection extends Section {
-  categories: Array<ActiveIngredientCategory | 'Todos'>;
+  categories: string[];
 }
 
 export interface HowItWorksSection extends Section {
