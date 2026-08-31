@@ -1,5 +1,5 @@
 import { FileText, Calculator, ThumbsUp, FlaskConical, PackageCheck } from 'lucide-react';
-import { HowItWorksSection } from '@/types/sections';
+import type { HowItWorksSection } from '@/types/sections';
 
 export const howItWorksSection: HowItWorksSection = {
   eyebrow: 'Como funciona',
