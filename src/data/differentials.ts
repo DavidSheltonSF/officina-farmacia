@@ -1,5 +1,5 @@
 import { HeartHandshake, ShieldCheck, Truck, GraduationCap, FlaskConical, Gem } from 'lucide-react';
-import { Differential } from '@/types';
+import type { Differential } from '@/types';
 
 export const differentials: Differential[] = [
   {
