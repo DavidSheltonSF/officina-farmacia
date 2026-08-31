@@ -5,7 +5,7 @@ import { MessageCircle, FileText } from 'lucide-react';
 import { whatsappConfig } from '@/lib/config';
 import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import { units } from '@/data/units';
-import { contactMethods } from '@/data/contact';
+import { contactItems } from '@/data/contact';
 import { contactSection } from '@/data/sections/contact';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
@@ -34,7 +34,7 @@ export function Contact() {
           />
 
           <div className="mt-9 space-y-5">
-            {contactMethods.map((method) => (
+            {contactItems.map((method) => (
               <div key={method.label} className="flex items-center gap-4">
                 <IconWrapper>
                   <method.icon className="size-5" aria-hidden="true" />
