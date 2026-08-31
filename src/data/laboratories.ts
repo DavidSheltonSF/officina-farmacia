@@ -1,4 +1,4 @@
-import { Laboratory } from '@/types';
+import type { Laboratory } from '@/types';
 
 export const laboratories: Laboratory[] = [
   {
