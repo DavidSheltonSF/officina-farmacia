@@ -1,4 +1,4 @@
-import { ActiveIngredientsSection } from '@/types/sections';
+import type { ActiveIngredientsSection } from '@/types/sections';
 
 export const activeIngredientsSection: ActiveIngredientsSection = {
   eyebrow: 'Ativos manipulados',
