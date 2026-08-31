@@ -22,18 +22,10 @@ export interface Laboratory {
   website: string;
 }
 
-export type ActiveIngredientCategory =
-  | 'Emagrecimento'
-  | 'Dermatologia'
-  | 'Capilar'
-  | 'Reposição Hormonal'
-  | 'Suplementação'
-  | 'Sono e Ansiedade';
-
 export interface ActiveIngredient {
   id: string;
   name: string;
-  category: ActiveIngredientCategory;
+  category: string;
   description: string;
 }
 
